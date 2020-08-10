@@ -1,10 +1,20 @@
-# SlickNav v1.0.10
+
+
+# SlickNav v1.0.10 - Forked
+
+
 ## Responsive Mobile Menu jQuery Plugin
 
 [![Join the chat at https://gitter.im/ComputerWolf/SlickNav](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ComputerWolf/SlickNav?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/slicknav/badge?style=rounded)](https://www.jsdelivr.com/package/npm/slicknav)
 
 ### [SlickNav.io](http://slicknav.io)
+
+### Featurs in this fork
+* Major rework of styling. Navbar is now built using flexbox instead of floats
+* [WIP] Some extra scss variables for easier customization
+* [WIP] Ability to specify a logo to add to the navbar
+* [WIP] Animated toggler
 
 ### Features
 * Multi-level menu support
@@ -40,13 +50,13 @@ slicknav.css can be modified to fit website design
     </script>
 
 ### Options
-    'label' : 'MENU', // Label for menu button. Use an empty string for no label.
+    'label' : '', // Label for menu button. Use an empty string for no label.
     'duplicate': true, // If true, the mobile menu is a copy of the original.
     'duration': true, // The duration of the sliding animation.
     'easingOpen': 'swing', // Easing used for open animations.
     'easingClose': 'swing' // Easing used for close animations.
-    'closedSymbol': '&#9658;', // Character after collapsed parents.
-    'openedSymbol': '&#9660;', // Character after expanded parents.
+    'closedSymbol': '+', // Character after collapsed parents.
+    'openedSymbol': '-', // Character after expanded parents.
     'prependTo': 'body', // Element, jQuery object, or jQuery selector string to prepend the mobile menu to.
     'appendTo': '', // Element, jQuery object, or jQuery selector string to append the mobile menu to. Takes precedence over prependTo.
     'parentTag': 'a', // Element type for parent menu items.
@@ -96,7 +106,7 @@ For example:
 
 More examples at [SlickNav.io](http://slicknav.io)
 
-### Browser Support
+### Browser Support (Requires additional testing)
 * Chrome
 * Firefox
 * Safari
