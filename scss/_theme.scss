@@ -19,7 +19,7 @@ $bar-height: 50px;
 	position: relative;
 	justify-content: space-between;
 	align-items: center;
-	flex-direction: row-reverse;
+	// flex-direction: row-reverse;
 
 	* {
 		box-sizing: border-box;
@@ -144,6 +144,31 @@ $bar-height: 50px;
 	line-height: 30px;
 	padding: 7px 12px;
 	height: 44px;
+}
+.slicknav_btn{
+	.slicknav_icon{
+		.slicknav_icon-bar{
+		transition: all 200ms;
+		box-shadow: none;
+		}
+	}
+}
+.slicknav_btn.slicknav_open{
+	.slicknav_icon{
+		.slicknav_icon-bar{
+			&:first-child{
+				transform: rotate(45deg) translate(5px, 5px);
+			}
+
+			&:nth-child(2){
+				transform: rotate(135deg);
+			}
+			&:nth-child(3){
+				opacity: 0;
+				transform: rotate(135deg) translate(-5px, 6px);
+			}
+		}
+	}
 }
 @media screen and (max-width: 992px) {
 	.slicknav_menu {

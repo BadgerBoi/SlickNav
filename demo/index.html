@@ -12,7 +12,9 @@
 </head>
 <body>
 <p><b>Resize browser to view mobile menu</b></p>
-
+<a href="#" class="logo">
+  <img src="https://via.placeholder.com/100x75" alt="">
+</a>
 Original Menu hidden on mobile
 <ul id="menu">
     <li>Parent 1
@@ -43,7 +45,9 @@ Original Menu hidden on mobile
 <script src="../dist/jquery.slicknav.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#menu').slicknav();
+	$('#menu').slicknav({
+    logo: '.logo'
+  });
 });
 </script>
 </body>
