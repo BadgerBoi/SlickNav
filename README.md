@@ -12,9 +12,9 @@
 
 ### Featurs in this fork
 * Major rework of styling. Navbar is now built using flexbox instead of floats
-* [WIP] Some extra scss variables for easier customization
-* [WIP] Ability to specify a logo to add to the navbar
-* [WIP] Animated toggler
+* Some extra scss variables for easier customization
+* Ability to specify a logo to add to the navbar
+* Animated toggler
 
 ### Features
 * Multi-level menu support
