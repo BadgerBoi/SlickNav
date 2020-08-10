@@ -66,7 +66,8 @@ slicknav.css can be modified to fit website design
     'showChildren': false // Show children of parent links by default.
     'removeIds': true // Remove IDs from all menu elements. Defaults to false if duplicate set to false.
     'removeClasses': false // Remove classes from all menu elements.
-	'brand': '' // Add branding to menu bar.
+    'brand': '' // Add branding to menu bar.
+    'logo' : '' //specify an element to add to the navbar as a logo using standard jquery selectors.
     'animations': 'jquery' // Animation library. Currently supports "jquery" and "velocity".
 
 ### Callbacks
