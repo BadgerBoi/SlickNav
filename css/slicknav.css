@@ -1,7 +1,9 @@
 .slicknav_btn {
   position: relative;
   display: block;
-  padding: 0.438em 0.625em;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
   line-height: 1.125em;
   cursor: pointer;
 }
@@ -12,14 +14,13 @@
 .slicknav_menu {
   *zoom: 1;
 }
-.slicknav_menu:after, .slicknav_menu:before {
-  display: none !important;
-}
 .slicknav_menu .slicknav_menutxt {
   display: block;
   line-height: 1.188em;
+  float: left;
 }
 .slicknav_menu .slicknav_icon {
+  float: left;
   width: 1.125em;
   height: 0.875em;
   margin: 0.188em 0 0 0.438em;
@@ -81,17 +82,15 @@
   display: inline;
 }
 
+.slicknav_brand {
+  float: left;
+}
+
 .slicknav_menu {
-  display: none;
-  height: 50px;
   font-size: 16px;
   box-sizing: border-box;
-  background: grey;
-  padding: 5px 15px;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row-reverse;
+  background: #4c4c4c;
+  padding: 5px;
 }
 .slicknav_menu * {
   box-sizing: border-box;
@@ -103,57 +102,38 @@
 }
 .slicknav_menu .slicknav_icon-bar {
   background-color: #fff;
-  box-shadow: 0 1px 0 #000;
-  width: 25px;
-  height: 0.3rem;
 }
 
 .slicknav_btn {
-  margin: 0;
-  padding: 0;
-  display: block;
-  width: 25px;
-  height: 25px;
+  margin: 5px 5px 6px;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   border-radius: 4px;
-  background-color: grey;
+  background-color: #222;
 }
 
 .slicknav_nav {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
   color: #fff;
   margin: 0;
   padding: 0;
   font-size: 0.875em;
   list-style: none;
   overflow: hidden;
-  background-color: #676767;
-  z-index: 50;
-  padding: px;
-}
-.slicknav_nav li {
-  padding: 10px;
-}
-.slicknav_nav li a {
-  font-size: 18px;
-}
-.slicknav_nav li a:hover {
-  background-color: transparent;
-  color: #FFF;
 }
 .slicknav_nav ul {
   list-style: none;
   overflow: hidden;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 20px;
 }
 .slicknav_nav .slicknav_row {
   padding: 5px 10px;
   margin: 2px 5px;
+}
+.slicknav_nav .slicknav_row:hover {
+  border-radius: 6px;
+  background: #ccc;
+  color: #fff;
 }
 .slicknav_nav a {
   padding: 5px 10px;
@@ -184,10 +164,4 @@
   line-height: 30px;
   padding: 7px 12px;
   height: 44px;
-}
-
-@media screen and (max-width: 992px) {
-  .slicknav_menu {
-    display: flex;
-  }
 }

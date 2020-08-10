@@ -1,31 +1,50 @@
 //colors
 $color_0: rgba(255, 255, 255, 0.75);
-$color_btn: #222;
+$color_btn: grey;
 $color_text: #fff;
 $color_shadow: #000;
-$color_bg: #4c4c4c;
+$color_bg: grey;
 $color_hover_bg: #ccc;
 $color_hover_text: #222;
+$ul-color: darken($color_bg, 10%);
+$bar-height: 50px;
 
 .slicknav_menu {
+	display: none;
+	height: $bar-height;
 	font-size: 16px;
 	box-sizing: border-box;
 	background: $color_bg;
-	padding: 5px;
+	padding: 5px 15px;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+
 	* {
 		box-sizing: border-box;
 	}
+
 	.slicknav_menutxt {
 		color: $color_text;
 		font-weight: bold;
 		text-shadow: 0 1px 3px $color_shadow;
 	}
+
 	.slicknav_icon-bar {
 		background-color: $color_text;
+		box-shadow: 0 1px 0 #000;
+		width: 25px;
+		height: 0.3rem;
 	}
 }
+
 .slicknav_btn {
-	margin: 5px 5px 6px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 25px;
+	height: 25px;
 	text-decoration: none;
 	text-shadow: 0 1px 1px $color_0;
 	-webkit-border-radius: 4px;
@@ -33,35 +52,68 @@ $color_hover_text: #222;
 	border-radius: 4px;
 	background-color: $color_btn;
 }
+
 .slicknav_nav {
-	color: $color_text;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	color: #fff;
 	margin: 0;
 	padding: 0;
 	font-size: 0.875em;
 	list-style: none;
 	overflow: hidden;
+	background-color: $ul-color;
+	z-index: 50;
+	padding: px;
+
+	li {
+		& {
+			padding: 10px;
+
+		}
+
+
+
+		a {
+			font-size: 18px;
+		}
+
+		a:hover{
+			background-color: transparent;
+			color: #FFF;
+		}
+	}
+
 	ul {
 		list-style: none;
 		overflow: hidden;
 		padding: 0;
-		margin: 0 0 0 20px;
+		margin: 0;
 	}
+
+
+
 	.slicknav_row {
 		padding: 5px 10px;
 		margin: 2px 5px;
-		&:hover {
-			-webkit-border-radius: 6px;
-			-moz-border-radius: 6px;
-			border-radius: 6px;
-			background: $color_hover_bg;
-			color: $color_text;
-		}
+
+		// &:hover {
+		// 	-webkit-border-radius: 6px;
+		// 	-moz-border-radius: 6px;
+		// 	border-radius: 6px;
+		// 	background: $color_hover_bg;
+		// 	color: $color_text;
+		// }
 	}
+
 	a {
 		padding: 5px 10px;
 		margin: 2px 5px;
 		text-decoration: none;
 		color: $color_text;
+
 		&:hover {
 			-webkit-border-radius: 6px;
 			-moz-border-radius: 6px;
@@ -70,22 +122,31 @@ $color_hover_text: #222;
 			color: $color_hover_text;
 		}
 	}
+
 	.slicknav_txtnode {
 		margin-left: 15px;
 	}
+
 	.slicknav_item a {
 		padding: 0;
 		margin: 0;
 	}
+
 	.slicknav_parent-link a {
 		padding: 0;
 		margin: 0;
 	}
 }
+
 .slicknav_brand {
 	color: $color_text;
 	font-size: 18px;
 	line-height: 30px;
 	padding: 7px 12px;
 	height: 44px;
+}
+@media screen and (max-width: 992px) {
+	.slicknav_menu {
+		display: flex;
+	}
 }
