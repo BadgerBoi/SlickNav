@@ -8,7 +8,7 @@
     var
         // default settings object.
         defaults = {
-            label: '',
+            // label: '', screw this option entirely tbh
             duplicate: true,
             duration: 200,
             easingOpen: 'swing',
@@ -132,8 +132,8 @@
         }
         $this.btn = $(
             ['<' + settings.parentTag + ' aria-haspopup="true" role="button" tabindex="0" class="' + prefix + '_btn ' + prefix + '_collapsed">',
-                '<span class="' + prefix + '_menutxt">' + settings.label + '</span>',
-                '<span class="' + iconClass + '">',
+                // '<span class="' + prefix + '_menutxt">' + settings.label + '</span>',
+                // '<span class="' + iconClass + '">',
                 '<span class="' + prefix + '_icon-bar"></span>',
                 '<span class="' + prefix + '_icon-bar"></span>',
                 '<span class="' + prefix + '_icon-bar"></span>',

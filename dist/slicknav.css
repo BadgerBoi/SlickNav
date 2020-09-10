@@ -27,32 +27,37 @@
   height: 0.875em;
   margin: 0.188em 0 0 0.438em;
 }
-.slicknav_menu .slicknav_icon:before {
-  background: transparent;
-  width: 1.125em;
-  height: 0.875em;
-  display: block;
-  content: "";
-  position: absolute;
-}
 .slicknav_menu .slicknav_no-text {
   margin: 0;
 }
 .slicknav_menu .slicknav_icon-bar {
   display: block;
   width: 1.125em;
-  height: 0.125em;
-  border-radius: 1px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  position: absolute;
+  left: 0;
+  margin: 0 !important;
+  text-shadow: none;
 }
-.slicknav_menu:before {
-  content: " ";
-  display: table;
+.slicknav_menu .slicknav_icon-bar:first-child {
+  top: 0;
 }
-.slicknav_menu:after {
-  content: " ";
-  display: table;
-  clear: both;
+.slicknav_menu .slicknav_icon-bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slicknav_menu .slicknav_icon-bar:nth-child(3) {
+  bottom: 0;
+}
+.slicknav_menu .slicknav_btn.slicknav_open .slicknav_icon-bar:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.slicknav_menu .slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(2) {
+  top: calc(50% - 2px);
+  transform: rotate(135deg);
+}
+.slicknav_menu .slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(3) {
+  opacity: 0;
+  transform: rotate(135deg) translate(-5px, 6px);
 }
 .slicknav_menu .logo {
   display: inline-flex;
@@ -113,9 +118,9 @@
 }
 .slicknav_menu .slicknav_icon-bar {
   background-color: #fff;
-  box-shadow: 0 1px 0 #000;
+  box-shadow: none;
   width: 25px;
-  height: 0.3rem;
+  height: 3px;
 }
 
 .slicknav_btn {
@@ -123,10 +128,9 @@
   padding: 0;
   display: block;
   width: 25px;
-  height: 25px;
+  height: 20px;
   text-decoration: none;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  border-radius: 4px;
+  text-shadow: none;
   background-color: grey;
 }
 
@@ -196,20 +200,9 @@
   height: 44px;
 }
 
-.slicknav_btn .slicknav_icon .slicknav_icon-bar {
+.slicknav_btn .slicknav_icon-bar {
   transition: all 200ms;
   box-shadow: none;
-}
-
-.slicknav_btn.slicknav_open .slicknav_icon .slicknav_icon-bar:first-child {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.slicknav_btn.slicknav_open .slicknav_icon .slicknav_icon-bar:nth-child(2) {
-  transform: rotate(135deg);
-}
-.slicknav_btn.slicknav_open .slicknav_icon .slicknav_icon-bar:nth-child(3) {
-  opacity: 0;
-  transform: rotate(135deg) translate(-5px, 6px);
 }
 
 @media screen and (max-width: 992px) {

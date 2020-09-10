@@ -8,6 +8,9 @@ $color_hover_bg: #ccc;
 $color_hover_text: #222;
 $ul-color: darken($color_bg, 10%);
 $bar-height: 50px;
+$toggler-height: 20px;
+$toggler-width: 25px;
+$toggler-span-height: 3px;
 
 .slicknav_menu {
 	display: none;
@@ -20,7 +23,6 @@ $bar-height: 50px;
 	justify-content: space-between;
 	align-items: center;
 	// flex-direction: row-reverse;
-
 	* {
 		box-sizing: border-box;
 	}
@@ -33,9 +35,9 @@ $bar-height: 50px;
 
 	.slicknav_icon-bar {
 		background-color: $color_text;
-		box-shadow: 0 1px 0 #000;
-		width: 25px;
-		height: 0.3rem;
+		box-shadow: none;
+		width: $toggler-width;
+		height: $toggler-span-height;
 	}
 }
 
@@ -43,13 +45,10 @@ $bar-height: 50px;
 	margin: 0;
 	padding: 0;
 	display: block;
-	width: 25px;
-	height: 25px;
+	width: $toggler-width;
+	height: $toggler-height;
 	text-decoration: none;
-	text-shadow: 0 1px 1px $color_0;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	text-shadow:none;
 	background-color: $color_btn;
 }
 
@@ -71,16 +70,13 @@ $bar-height: 50px;
 	li {
 		& {
 			padding: 10px;
-
 		}
-
-
 
 		a {
 			font-size: 18px;
 		}
 
-		a:hover{
+		a:hover {
 			background-color: transparent;
 			color: #FFF;
 		}
@@ -93,12 +89,9 @@ $bar-height: 50px;
 		margin: 0;
 	}
 
-
-
 	.slicknav_row {
 		padding: 5px 10px;
 		margin: 2px 5px;
-
 		// &:hover {
 		// 	-webkit-border-radius: 6px;
 		// 	-moz-border-radius: 6px;
@@ -145,31 +138,16 @@ $bar-height: 50px;
 	padding: 7px 12px;
 	height: 44px;
 }
-.slicknav_btn{
-	.slicknav_icon{
-		.slicknav_icon-bar{
+
+.slicknav_btn {
+	.slicknav_icon-bar {
 		transition: all 200ms;
 		box-shadow: none;
-		}
 	}
 }
-.slicknav_btn.slicknav_open{
-	.slicknav_icon{
-		.slicknav_icon-bar{
-			&:first-child{
-				transform: rotate(45deg) translate(5px, 5px);
-			}
 
-			&:nth-child(2){
-				transform: rotate(135deg);
-			}
-			&:nth-child(3){
-				opacity: 0;
-				transform: rotate(135deg) translate(-5px, 6px);
-			}
-		}
-	}
-}
+
+//only show nav on smaller screens
 @media screen and (max-width: 992px) {
 	.slicknav_menu {
 		display: flex;
