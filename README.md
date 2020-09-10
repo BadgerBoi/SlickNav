@@ -50,7 +50,6 @@ slicknav.css can be modified to fit website design
     </script>
 
 ### Options
-    'label' : '', // Label for menu button. Use an empty string for no label.
     'duplicate': true, // If true, the mobile menu is a copy of the original.
     'duration': true, // The duration of the sliding animation.
     'easingOpen': 'swing', // Easing used for open animations.
